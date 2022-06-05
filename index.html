@@ -27,7 +27,7 @@
             <!-- ФОРМА -->
             <form class="form" name="calc" action="#" method="post">
               <!-- ПОЛ -->
-              <fieldset class="d-flex flex-column mb-5">
+              <fieldset class="d-flex flex-column mb-5" disabled>
                 <h2 class="mb-3">Пол</h2>
 
                 <div class="btn-group btn-group-lg" role="group" aria-label="gender-group">
@@ -55,7 +55,7 @@
               <!-- КОНЕЦ ПОЛ -->
 
               <!-- ФИЗ-ПАРАМЕТРЫ -->
-              <fieldset class="mb-5" name="parameters">
+              <fieldset class="mb-5" name="parameters" disabled>
                 <h2 class="mb-3">Физические параметры</h2>
 
                 <div class="parameters row">
@@ -115,7 +115,7 @@
               <!-- КОНЕЦ ФИЗ-ПАРАМЕТРЫ -->
 
               <!-- ФИЗ-АКТИВНОСТЬ -->
-              <fieldset class="mb-5">
+              <fieldset class="mb-5" disabled>
                 <h2 class="mb-3">Физическая активность</h2>
 
                 <div class="radios-group">
@@ -194,7 +194,7 @@
               </fieldset>
               <!-- ФИЗ-АКТИВНОСТЬ -->
 
-              <fieldset class="form__submit btn-group d-flex">
+              <fieldset class="form__submit btn-group d-flex mb-2" disabled>
                 <button type="submit" class="btn btn-success btn-lg w-100" name="submit">Рассчитать</button>
                 <button type="reset" class="btn btn-outline-danger btn-lg text-nowrap" name="reset">
                   Очистить поля
