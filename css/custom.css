@@ -1,0 +1,18 @@
+.main-container {
+  max-width: 600px;
+}
+
+.ol1 {
+  outline: 2px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -2px;
+}
+
+.ol2 {
+  outline: 2px solid rgba(5, 119, 21, 0.8);
+  outline-offset: -2px;
+}
+
+.ol3 {
+  outline: 2px solid rgba(38, 0, 255, 0.8);
+  outline-offset: -2px;
+}

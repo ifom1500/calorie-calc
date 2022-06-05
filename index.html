@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Демо Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+  <body class="bg-secondary p-5">
+    <main class="container main-container mt-5">
+      <!-- ЗАГОЛОВОК -->
+      <div class="row">
+        <div class="col text-white text-center">
+          <h1>Калькулятор калорий</h1>
+        </div>
+      </div>
+
+      <div class="row mt-3 mb-5 bg-white rounded-3 p-5">
+        <div class="container">
+          <div class="row">
+            <!-- ФОРМА -->
+            <form class="form" name="calc" action="#" method="post">
+              <!-- ПОЛ -->
+              <fieldset class="d-flex flex-column mb-5">
+                <h2 class="mb-3">Пол</h2>
+
+                <div class="btn-group btn-group-lg" role="group" aria-label="gender-group">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="gender"
+                    id="gender-male"
+                    value="male"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn btn-outline-secondary" for="gender-male">Мужчина</label>
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="gender"
+                    id="gender-female"
+                    value="female"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn btn-outline-secondary" for="gender-female">Женщина</label>
+                </div>
+              </fieldset>
+              <!-- КОНЕЦ ПОЛ -->
+
+              <!-- ФИЗ-ПАРАМЕТРЫ -->
+              <fieldset class="mb-5" name="parameters">
+                <h2 class="mb-3">Физические параметры</h2>
+
+                <div class="parameters row">
+                  <div class="parameters__age col-4 d-flex flex-column align-items-center">
+                    <label for="age" class="form-label h5">
+                      Возраст
+                      <span class="form-text mark">лет</span>
+                    </label>
+
+                    <input
+                      id="age"
+                      type="text"
+                      class="form-control"
+                      name="age"
+                      placeholder="0"
+                      maxlength="3"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+
+                  <div class="parameters__height col-4 d-flex flex-column align-items-center">
+                    <label for="height" class="form-label h5">
+                      Рост
+                      <span class="form-text mark">см</span>
+                    </label>
+                    <input
+                      id="height"
+                      type="text"
+                      class="form-control"
+                      name="height"
+                      placeholder="0"
+                      maxlength="3"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+
+                  <div class="parameters__weight col-4 d-flex flex-column align-items-center">
+                    <label for="weight" class="form-label h5">
+                      Вес
+                      <span class="form-text mark">кг</span>
+                    </label>
+                    <input
+                      id="weight"
+                      type="text"
+                      class="form-control"
+                      name="weight"
+                      placeholder="0"
+                      maxlength="3"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                </div>
+              </fieldset>
+              <!-- КОНЕЦ ФИЗ-ПАРАМЕТРЫ -->
+
+              <!-- ФИЗ-АКТИВНОСТЬ -->
+              <fieldset class="mb-5">
+                <h2 class="mb-3">Физическая активность</h2>
+
+                <div class="radios-group">
+                  <div class="radio">
+                    <div class="form-check">
+                      <input
+                        id="activity-minimal"
+                        class="form-check-input"
+                        name="activity"
+                        value="min"
+                        type="radio"
+                        checked
+                        required
+                      />
+                      <label class="form-check-label fw-bold" for="activity-minimal">Минимальная</label>
+                    </div>
+                    <p class="radio__description">Сидячая работа и нет физических нагрузок</p>
+                  </div>
+                  <div class="radio">
+                    <div class="form-check">
+                      <input
+                        id="activity-low"
+                        class="form-check-input"
+                        name="activity"
+                        value="low"
+                        type="radio"
+                        required
+                      />
+                      <label class="form-check-label fw-bold" for="activity-low">Низкая</label>
+                    </div>
+                    <p class="radio__description">Редкие, нерегулярные тренировки, активность в быту</p>
+                  </div>
+                  <div class="radio">
+                    <div class="form-check">
+                      <input
+                        id="activity-medium"
+                        class="form-check-input"
+                        name="activity"
+                        value="medium"
+                        type="radio"
+                        required
+                      />
+                      <label class="form-check-label fw-bold" for="activity-medium">Средняя</label>
+                    </div>
+                    <p class="radio__description">Тренировки 3-5 раз в неделю</p>
+                  </div>
+                  <div class="radio">
+                    <div class="form-check">
+                      <input
+                        id="activity-high"
+                        class="form-check-input"
+                        name="activity"
+                        value="high"
+                        type="radio"
+                        required
+                      />
+                      <label class="form-check-label fw-bold" for="activity-high">Высокая</label>
+                    </div>
+                    <p class="radio__description">Тренировки 6-7 раз в неделю</p>
+                  </div>
+                  <div class="radio">
+                    <div class="form-check">
+                      <input
+                        id="activity-maximal"
+                        class="form-check-input"
+                        name="activity"
+                        value="max"
+                        type="radio"
+                        required
+                      />
+                      <label class="form-check-label fw-bold" for="activity-maximal">Очень высокая</label>
+                    </div>
+                    <p class="radio__description">Больше 6 тренировок в неделю и физическая работа</p>
+                  </div>
+                </div>
+              </fieldset>
+              <!-- ФИЗ-АКТИВНОСТЬ -->
+
+              <fieldset class="form__submit btn-group d-flex">
+                <button type="submit" class="btn btn-success btn-lg w-100" name="submit">Рассчитать</button>
+                <button type="reset" class="btn btn-outline-danger btn-lg text-nowrap" name="reset">
+                  Очистить поля
+                </button>
+              </fieldset>
+
+              <!-- Кнопка-триггер модального окна -->
+              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Запустите демо модального окна
+              </button> -->
+            </form>
+            <!-- КОНЕЦ ФОРМЫ -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Модальное окно -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ваша норма калорий</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="result-list list-unstyled">
+                <li class="result-item d-flex justify-content-between">
+                  <p class="fs-3 mb-0"><span id="calories-norm">3 800</span> ккал</p>
+                  <p class="fs-4 text-muted">поддержание веса</p>
+                </li>
+                <li class="counter__result-item d-flex justify-content-between">
+                  <p class="fs-3 mb-0"><span id="calories-minimal">3 300</span> ккал</p>
+                  <p class="fs-4 text-muted">снижение веса</p>
+                </li>
+                <li class="counter__result-item d-flex justify-content-between">
+                  <p class="fs-3 mb-0"><span id="calories-maximal">4 000</span> ккал</p>
+                  <p class="fs-4 text-muted">набор веса</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
