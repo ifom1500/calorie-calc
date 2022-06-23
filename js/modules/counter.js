@@ -53,6 +53,8 @@ export class Counter {
     this._onFormSubmit = this._onFormSubmit.bind(this);
     // защищенное свойство
     // новая функция с привязкой контекста
+
+    this.result = new Result(this.root);
   }
 
   _formatInput(input) {
@@ -71,6 +73,7 @@ export class Counter {
   _onFormReset() {
     this.reset.disabled = true;
     this.submit.disabled = true;
+    this.result.clear();
   }
 
   _onFormSubmit(evt) {
@@ -82,7 +85,7 @@ export class Counter {
       max: this.getCaloriesMax(),
     };
 
-    console.log('caloriesData = ', caloriesData);
+    this.result.calculate(caloriesData);
   }
 
   init() {

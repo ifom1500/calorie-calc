@@ -197,16 +197,12 @@
                 <!-- ФИЗ-АКТИВНОСТЬ -->
 
                 <fieldset class="form__submit btn-group d-flex mb-2">
-                  <button type="submit" class="btn btn-success btn-lg w-100" name="submit" disabled>Рассчитать</button>
+                  <button type="submit" class="btn btn-success btn-lg w-100" name="submit" data-bs-toggle="modal" data-bs-target="#resultModal" disabled>Рассчитать</button>
                   <button type="reset" class="btn btn-outline-danger btn-lg text-nowrap" name="reset" disabled>
                     Очистить поля
                   </button>
                 </fieldset>
 
-                <!-- Кнопка-триггер модального окна -->
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Запустите демо модального окна
-              </button> -->
               </form>
               <!-- КОНЕЦ ФОРМЫ -->
             </div>
@@ -214,7 +210,7 @@
         </div>
 
         <!-- Модальное окно -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade result" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
